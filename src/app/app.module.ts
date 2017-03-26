@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
+import { LanguagesService } from './languages.service';
+
 import { AppComponent } from './app.component';
+import { LocalizationComponent } from './localization/localization.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LocalizationComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +20,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [LanguagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
