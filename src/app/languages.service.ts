@@ -21,6 +21,10 @@ export class LanguagesService {
 		console.log( this.languages );
 	}
 
+	getLanguages(){
+		return this.languages;
+	}
+
 	/**
 	 * Load all languages
 	 */

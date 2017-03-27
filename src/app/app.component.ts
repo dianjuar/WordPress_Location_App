@@ -11,7 +11,7 @@ import { LanguagesService } from './languages.service';
 export class AppComponent {
     private validURL: boolean;
 
-    constructor(private languages: LanguagesService) { 
+    constructor(private languagesService: LanguagesService) { 
         this.validURL = true;
     }
 }
