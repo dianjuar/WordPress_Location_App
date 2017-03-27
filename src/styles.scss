@@ -4,66 +4,37 @@
 @import url("~https://fonts.googleapis.com/icon?family=Material+Icons");
 // Variables
 @import 'assets/scss/variables';
-
-
+// Fonts
+@import 'assets/scss/fonts';
+// Titles
 body {
   margin: 0;
-  padding: 0;
   font-family: JosefinSans-Regular;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: Cardo-Regular;
+}
+// ------------------ Rules  ------------------
 .primary-color {
-    color: $primary !important;
-  }
+  color: $primary !important;
+}
 .accent-color {
-    color: $accent !important;
-  }
+  color: $accent !important;
+}
 
 .background-primary-color {
-    background-color: $primary!important;
+  background-color: $primary!important;
 }
 
 .background-accent-color {
-    background-color: $accent !important;
+  background-color: $accent !important;
 }
 
 .white-text {
-    color: #FFF !important;
+  color: #FFF !important;
 }
 
 .theme-text-color{
   color: $foreground;
 }
-
-// Titles
-h1, h2, h3, h4, h5, h6 {
-	font-family: Cardo-Regular;
-}
-//------------------------------------------------------
-#header{
-  padding: 0;
-  background-color: $primary;
-  
-  .row{
-    display: flex;
-    justify-content: center;
-  }
-
-  // Center titles vertically 
-  #header-titles{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-#parameters{
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.app-info{
-  background-color: $background;
-  color: $foreground;
-}
-//------------------------------------------------------
