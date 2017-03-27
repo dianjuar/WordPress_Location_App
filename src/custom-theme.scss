@@ -1,0 +1,68 @@
+// Variables
+@import 'assets/scss/variables';
+
+/*import '~@angular/material/core/theming/all-theme';
+// Plus imports for other components in your app.
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$app-primary: mat-palette($primary);
+$app-accent:  mat-palette($accent, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$app-warn:    mat-palette($warn);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);*/
+
+
+
+/* 
+    Copyright 2016 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that can be found in the LICENSE file at https://angular.io/license
+*/
+                    
+
+// custom theme
+@import "~@angular/material/core/theming/all-theme";
+
+// core 
+@include mat-core();
+
+// theme colors
+$app-primary: mat-palette($mat-teal, 800);
+$app-accent: mat-palette($mat-amber, 600);
+$app-warn: mat-palette($mat-deep-orange, 600);
+
+$theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+// create theme from palettes
+@include angular-material-theme($theme);
+
+// gated themes
+// anything under these css class will have the dark theme
+.dark-theme{
+    // theme colors
+    $primary-dark: mat-palette($mat-pink, 700);
+    $accent-dark: mat-palette($mat-green);
+    $warn-dark: mat-palette($mat-red);
+
+    $theme-dark: mat-dark-theme($primary-dark, $accent-dark, $warn-dark);
+
+    // create theme from palettes
+    @include angular-material-theme($theme-dark);
+}
+
+/* 
+    Copyright 2016 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that can be found in the LICENSE file at https://angular.io/license
+*/
