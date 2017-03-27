@@ -9,6 +9,8 @@ import { LanguagesService } from './languages.service';
 import { AppComponent } from './app.component';
 import { LocalizationComponent } from './localization/localization.component';
 
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent,
