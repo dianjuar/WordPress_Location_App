@@ -1,32 +1,24 @@
 <!-- Header -->
-<div id="header" class="jumbotron white-text">
-  <div class="row">
-    <div class="col-md-2">
-      <img src="assets/logo.svg" alt="logo">
-    </div>
-    <div id="header-titles" class="col-md-8">
-      <h1>WordPress Location App</h1>
-      <h2>Locate any WordPress plugin, theme or core quickly.</h2>
-    </div>
-  </div>
-  <!--row-->
-</div>
+<md-toolbar id="header" color="primary">
+    <img src="assets/logo.svg" alt="logo">
+    <h1>WordPress Location App</h1>
+    <small>Locate any WordPress plugin, theme or core quickly.</small>
+</md-toolbar>
 
-<div class="container">
-  <div id="parameters" class="row">
-    <div class="col-md-12">
-      <div class="row">
+<div class="app-parameters">
+    <md-card>
         <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
-        <input type="text">
-      </div>
-      <div class="row" *ngIf="validURL">
-        <h2>Lorem ipsum dolor sit.</h2>
-        <button md-raised-button color="accent" class="theme-text-color"> Lorem ipsum dolor sit. </button>
-      </div>
+        <md-input-container dividerColor="accent">
+            <md-icon mdPrefix>language</md-icon>
+            <input mdInput type="url" focused placeholder="Your WP plugin, theme, or core URL to localize" value="">
+        </md-input-container>
 
-    </div>
-  </div>
-  <div class="row app-info">
-    <h1>coming soon</h1>
-  </div>
+        <div class="languages">
+            <md-select placeholder="Select Your Language">
+                <md-option *ngFor="let lan of languagesService.getLanguages()" [value]="lan.slug">
+                    {{ lan.name }}
+                </md-option>
+            </md-select>
+        </div>
+    </md-card>
 </div>
