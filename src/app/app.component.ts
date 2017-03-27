@@ -9,12 +9,9 @@ import { LanguagesService } from './languages.service';
 })
 
 export class AppComponent {
-    foods = [
-        { value: 'steak-0', viewValue: 'Steak' },
-        { value: 'pizza-1', viewValue: 'Pizza' },
-        { value: 'tacos-2', viewValue: 'Tacos' }
-    ];
+    private validURL: boolean;
 
     constructor(private languages: LanguagesService) { 
+        this.validURL = true;
     }
 }

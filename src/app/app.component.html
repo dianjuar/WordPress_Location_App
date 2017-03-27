@@ -1,92 +1,32 @@
 <!-- Header -->
-<div class="header jumbotron">
-  <img class="img-responsive" src='assets/logo-temp.png' alt='Logo'>
-  <h1>WordPress Location App</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur tenetur, voluptas asperiores perferendis, fugit dolorum
-    ut enim! Ipsa pariatur recusandae</p>
-</div>
-
-<div class="container">
-  <div class="parameters">
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, culpa!</h1>
-
-    <md-input-container>
-      <input mdInput placeholder="Your plugin, theme or WordPress version to localize" type="url" hintLabel="just a hint" floatPlaceholder/>
-    </md-input-container>
-
-    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae.</h2>
-
-    <md-select placeholder="Select destiny language">
-      <md-option > ES-VE (Venezuela) </md-option>
-      <md-option > ES-CO (Colombia) </md-option>
-      <md-option > ES-MX (Mexico) </md-option>
-      <md-option > ES-CH (Chile) </md-option>
-      <md-option > ES-ARs (Argentina) </md-option>
-    </md-select>
-    <br>
-    <button md-raised-button color="primary"> GO!  </button>
-  </div> <!-- parameters -->
-</div> <!-- container -->
-
-
-
-<!-- Footer -->
-
-<div class="container">
-  <div class="information">
-
-    <md-card class="example-card">
-      <md-card-header>
-        <md-card-title>Lorem ipsum dolor.</md-card-title>
-        <md-card-subtitle>Lorem ipsum dolor sit amet, consectetur.</md-card-subtitle>
-      </md-card-header>
-        <!--<img md-card-image src="https://unsplash.it/200/200/?random">-->
-      <md-card-content>
-        <p>
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quo quibusdam 
-         temporibus autem officia ad totam, amet explicabo vero laudantium modi pariatur eveniet 
-         ratione eius odio velit labore deserunt architecto.
-        </p>
-      </md-card-content>
-    </md-card>
-    <br>
-    <md-card class="example-card">
-      <md-card-header>
-        <md-card-title>Lorem ipsum dolor.</md-card-title>
-        <md-card-subtitle>Lorem ipsum dolor sit amet, consectetur.</md-card-subtitle>
-      </md-card-header>
-        <!--<img md-card-image src="https://unsplash.it/200/200/?random">-->
-      <md-card-content>
-        <p>
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quo quibusdam 
-         temporibus autem officia ad totam, amet explicabo vero laudantium modi pariatur eveniet 
-         ratione eius odio velit labore deserunt architecto.
-        </p>
-      </md-card-content>
-    </md-card>
-    <br>
-    <md-card class="example-card">
-      <md-card-header>
-        <md-card-title>Lorem ipsum dolor.</md-card-title>
-        <md-card-subtitle>Lorem ipsum dolor sit amet, consectetur.</md-card-subtitle>
-      </md-card-header>
-        <!--<img md-card-image src="https://unsplash.it/200/200/?random">-->
-      <md-card-content>
-        <p>
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quo quibusdam 
-         temporibus autem officia ad totam, amet explicabo vero laudantium modi pariatur eveniet 
-         ratione eius odio velit labore deserunt architecto.
-        </p>
-      </md-card-content>
-    </md-card>
-
-
-
+<div id="header" class="jumbotron white-text">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="assets/logo.svg" alt="logo">
+    </div>
+    <div id="header-titles" class="col-md-8">
+      <h1>WordPress Location App</h1>
+      <h2>Locate any WordPress plugin, theme or core quickly.</h2>
+    </div>
   </div>
+  <!--row-->
 </div>
 
-<div class="header jumbotron">
-  <h1>Footer</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit non dicta deserunt, 
-    nostrum at hic in ea dolorem ullam!</p>
+<div class="container">
+  <div id="parameters" class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+        <input type="text">
+      </div>
+      <div class="row" *ngIf="validURL">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <button md-raised-button color="accent" class="theme-text-color"> Lorem ipsum dolor sit. </button>
+      </div>
+
+    </div>
+  </div>
+  <div class="row app-info">
+    <h1>coming soon</h1>
+  </div>
 </div>
