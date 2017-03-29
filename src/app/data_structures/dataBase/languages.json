@@ -1,0 +1,50 @@
+[
+{"name": "Azerbaijani", "native": "Azərbaycan dili", "slug": "az"},
+{"name": "Azerbaijani (Turkey)", "native": "Azərbaycan Türkcəsi", "slug": "az_TR"},
+
+{"name": "German", "native": "Deutsch", "slug": "de"},
+{"name": "German (Switzerland)", "native": "Deutsch (Schweiz)", "slug": "de_CH"},
+
+{"name": "English (Australia)", "native": "English (Australia)", "slug": "en_AU"},
+{"name": "English (Canada)", "native": "English (Canada)", "slug": "en_CA"},
+{"name": "English (New Zealand)", "native": "English (New Zealand)", "slug": "en_NZ"},
+{"name": "English (South Africa)", "native": "English (South Africa)", "slug": "en_ZA"},
+{"name": "English (UK)", "native": "English (UK)", "slug": "en_GB"},
+
+{"name": "Spanish (Spain)", "native": "Español", "slug": "es"},
+{"name": "Spanish (Argentina)", "native": "Español de Argentina", "slug": "es_AR"},
+{"name": "Spanish (Chile)", "native": "Español de Chile", "slug": "es_CL"},
+{"name": "Spanish (Colombia)", "native": "Español de Colombia", "slug": "es_CO"},
+{"name": "Spanish (Costa Rica)", "native": "Español de Costa Rica", "slug": "es_CR"},
+{"name": "Spanish (Guatemala)", "native": "Español de Guatemala", "slug": "es_GT"},
+{"name": "Spanish (Mexico)", "native": "Español de México", "slug": "es_MX"},
+{"name": "Spanish (Peru)", "native": "Español de Perú", "slug": "es_PE"},
+{"name": "Spanish (Puerto Rico)", "native": "Español de Puerto Rico", "slug": "es_PR"},
+{"name": "Spanish (Venezuela)", "native": "Español de Venezuela", "slug": "es_VE"},
+
+{"name": "Persian", "native": "فارسی", "slug": "fa"},
+{"name": "Persian (Afghanistan)", "native": "(فارسی (افغانستان", "slug": "fa_AF"},
+
+{"name": "French (France)", "native": "Français", "slug": "fr"},
+{"name": "French (Switzerland)", "native": "Français de Suisse", "slug": "fr_ch"},
+{"name": "French (Belgium)", "native": "Français de Belgique", "slug": "fr_BE"},
+{"name": "French (Canada)", "native": "Français du Canada", "slug": "fr_CA"},
+
+{"name": "Dutch", "native": "Nederlands", "slug": "nl"},
+{"name": "Dutch (Belgium)", "native": "Nederlands (België)", "slug": "nl_BE"},
+
+{"name": "Portuguese (Portugal)", "native": "Português", "slug": "pt"},
+{"name": "Portuguese (Brazil)", "native": "Português do Brasil", "slug": "pt_BR"},
+
+{"name": "Albanian", "native": "Shqip", "slug": "sq"},
+{"name": "Shqip (Kosovo)", "native": "Për Kosovën Shqip", "slug": "sq_XK"},
+
+{"name": "Tamil", "native": "தமிழ்", "slug": "ta"},
+{"name": "Tamil (Sri Lanka)", "native": "தமிழ்", "slug": "ta_LK"},
+
+{"name": "Chinese", "native": "中文", "slug": "zh"},
+{"name": "Chinese (China)", "native": "简体中文", "slug": "zh_CN"},
+{"name": "Chinese (Hong Kong)", "native": "香港中文版\t", "slug": "zh_HK"},
+{"name": "Chinese (Singapore)", "native": "中文", "slug": "zh_sg"},
+{"name": "Chinese (Taiwan)", "native": "繁體中文", "slug": "zh_TW"}
+]

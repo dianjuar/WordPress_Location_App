@@ -2,23 +2,39 @@
 
 // Material Icons
 @import url("~https://fonts.googleapis.com/icon?family=Material+Icons");
-// Theme
-@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
-
+// Variables
 @import 'assets/scss/variables';
-
+// Fonts
+@import 'assets/scss/fonts';
+// Titles
 body {
   margin: 0;
-  padding: 0;
+  font-family: JosefinSans-Regular;
 }
 
-
-// Titles
 h1, h2, h3, h4, h5, h6 {
 	font-family: Cardo-Regular;
 }
+// ------------------ Rules  ------------------
+.primary-color {
+  color: $primary !important;
+}
+.accent-color {
+  color: $accent !important;
+}
 
-// Regular text
-body{
-  font-family: JosefinSans-Regular;
+.background-primary-color {
+  background-color: $primary!important;
+}
+
+.background-accent-color {
+  background-color: $accent !important;
+}
+
+.white-text {
+  color: #FFF !important;
+}
+
+.theme-text-color{
+  color: $foreground;
 }
