@@ -21,6 +21,16 @@ export class LanguagesService {
 	 */
 	private _regexPTCLanguage;
 
+	/**
+	 * Selected language by the user in slug
+	 */
+	private _selectedLanguage_slug: string;
+
+	/**
+	 * URL of the PTC
+	 */
+	private _URL;
+
 	constructor() {
 		// init the vector
 		this._languages = new Array<Language>();
@@ -32,17 +42,35 @@ export class LanguagesService {
 		this._loadLanguages();
 
 		// init regular expresion of valid language's PTC
-		this._regexPTCLanguage = new RegExp('(.*)'+this._getRegExLanguages()+'(\/default)', 'gi');
+		this._regexPTCLanguage = new RegExp(this._getRegExLanguages()+'(\/default)', 'gi');
 
-		console.log(this._regexPTCLanguage);
+		this._selectedLanguage_slug = undefined;
 	}
 
+	//---------getters ON
 	/**
 	 * _languages getter
 	 */
-	getLanguages() {
+	getLanguages(): Array<Language> {
 		return this._languages;
 	}
+
+	getSelectedLanguage_slug(): string {
+		return this._selectedLanguage_slug;
+	}
+	//---------getters OFF
+	//---------setters ON
+	/**
+	 * _URL setter
+	 * @param url URL of the PTC
+	 */
+	setURL(url: string){
+		this._URL = url;
+
+		this._setLanguageSelected_slug(url);
+	}
+	//---------setters OFF
+
 
 	/**
 	 * Given an URL verify if it structure is a valud URL
@@ -58,6 +86,16 @@ export class LanguagesService {
 	 */
 	isPTC_LanguageValid(URL: string): boolean {
 		return URL.match(this._regexPTCLanguage) != null;
+	}
+
+	/**
+	 * Get the related languages given a slug of a language
+	 */
+	getRelatedLanguages(): Array<Language> {
+		return this._languages.filter( (lang: Language) => {
+			return lang.slug.toLowerCase() == this._selectedLanguage_slug.toLowerCase()
+		} 
+		)[0].related;
 	}
 
 	/**
@@ -89,6 +127,16 @@ export class LanguagesService {
 		})
 		);
 		this._loadRelatedLanguages();
+	}
+
+	/**
+	 * _selectedLanguage_slug setter
+	 */
+	private _setLanguageSelected_slug(url: string){
+		this._selectedLanguage_slug = this._regexPTCLanguage.exec(url)[1].replace('-','_');
+		//this._selectedLanguage_slug = 'es_ve';
+
+		console.log(this._selectedLanguage_slug);
 	}
 
 	/**

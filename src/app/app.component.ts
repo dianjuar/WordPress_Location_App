@@ -9,7 +9,7 @@ import { Observable, Subject } from 'rxjs';
 })
 
 export class AppComponent implements OnInit{
-    private _validURL: boolean;
+    private _isValidURL: boolean;
 
     /**
      * URL of the PTC to localize
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
     private _urlObserver: Observable<string>;
 
     constructor(private _languagesService: LanguagesService) { 
-        this._validURL = false;
+        this._isValidURL = undefined;
         this._url = '';
 
         this._urlStream = new Subject();
@@ -43,11 +43,15 @@ export class AppComponent implements OnInit{
                                       // Filter if the language choosen is supported
                                       .filter(text => {
                                           let isValid = this._languagesService.isPTC_LanguageValid(text);
-
+                                        
                                           if(!isValid) console.log("invalid language ->"+text);
-
+                                        
                                           return isValid;
                                       })
+                                      // validate HTTP 200
+                                      .filter(text => {
+                                          return true;
+                                      });
     }
 
     /**
@@ -56,14 +60,19 @@ export class AppComponent implements OnInit{
      */
     introducedURL(url){
         // Push the new value to the observable
+        this._isValidURL = false;
         this._urlStream.next(url);
     }
 
     ngOnInit(){
+        this._urlObserver.subscribe(url => { 
+            this._languagesService.setURL(url);
 
-        this._urlObserver.subscribe(url => { this._url = url; console.log("Correct -> " + url); },
-                                    error => { console.log("error"); },
-                                    () => { console.log("Finished"); } );
+            this._url = url;
+            this._isValidURL = true;
+        },
+        error => { console.log("error"); },
+        () => { console.log("Finished"); } );
     }
     
 }

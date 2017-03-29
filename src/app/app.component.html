@@ -10,15 +10,18 @@
         <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
         <md-input-container dividerColor="accent">
             <md-icon mdPrefix>language</md-icon>
-            <input mdInput type="url" focused placeholder="Your WP plugin, theme, or core URL to localize" value="">
+            <input mdInput type="url" focused placeholder="Your WP plugin, theme, or core URL to localize"
+                   [ngModel]="_url" (ngModelChange)="introducedURL($event)">
         </md-input-container>
 
-        <div class="languages">
+        <div class="languages" *ngIf="_isValidURL" >
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
             <md-select placeholder="Select Your Language">
-                <md-option *ngFor="let lan of languagesService.getLanguages()" [value]="lan.slug">
-                    {{ lan.name }}
+                <md-option *ngFor="let lan of _languagesService.getRelatedLanguages()" [value]="lan.slug">
+                    {{ lan.name }} - {{lan.native}}
                 </md-option>
             </md-select>
+            <button md-raised-button color="accent">Start</button>
         </div>
     </md-card>
 </div>
