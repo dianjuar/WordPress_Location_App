@@ -10,19 +10,25 @@ import { AppComponent } from './app.component';
 import { LocalizationComponent } from './localization/localization.component';
 
 import 'hammerjs';
+import { HomeComponent } from './home/home.component';
+
+import { AppRoutingModule } from './app-routing.module'
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LocalizationComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    MaterialModule.forRoot()
-  ],
-  providers: [LanguagesService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LocalizationComponent,
+        HomeComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        MaterialModule.forRoot(),
+        AppRoutingModule
+    ],
+    providers: [LanguagesService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
